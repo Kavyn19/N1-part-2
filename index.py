@@ -28,3 +28,33 @@ def verificar ():
             usuarioCadastrado()
         elif opcaoUsuario == 3:
             ordemAlfabetica()
+        elif opcaoUsuario == 4:
+            verificarNome()
+        elif opcaoUsuario == 5:
+            remover()
+        elif opcaoUsuario == 6:
+            alteraNome()
+        else:
+            break
+
+def continuar():
+
+    desejaContinuar = int(input("Deseja continuar? 1= sim 2= não  "))
+    if desejaContinuar == 1:
+        verificar()
+    else:
+        exit
+
+def cadastreUsuario():
+
+    qtdDeUsuario = int(input("Quantos usuários voce deseja criar? "))
+    aux = 0
+    while (aux < qtdDeUsuario):
+        listaDeUsuario.append (input("Qual o nome do usuario: "))
+        listaDeUsuario.append (input("Qual o email do usuario:  "))
+        print("Usuario criado")
+        aux = aux+1
+
+
+
+def usuarioCadastrado ():
