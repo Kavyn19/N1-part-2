@@ -58,3 +58,33 @@ def cadastreUsuario():
 
 
 def usuarioCadastrado ():
+    s = " - "
+    print(s.join(listaDeUsuario))
+
+def ordemAlfabetica():
+    listaDeUsuario.sort()
+    print(listaDeUsuario)
+
+def verificarNome():
+    verificarNome = input("Qual o nome do usuario que deseja verificar ?")
+    verificarNome = listaDeUsuario
+    for Verifique in verificarNome:
+        print (Verifique)
+
+
+def remover():
+    removerUsuario = input("Qual usuario voce deseja remover, informe o email")
+    listaDeUsuario.remove (removerUsuario)
+    print(removerUsuario)
+
+def alteraNome():
+    email = input("digite o e-mail  do usuário a ser alterado: ")
+    for i in listaDeUsuario:
+     if i["email"] == email:
+        i["nome"] = input("digite o novo nome: ")
+
+def main():
+    verificar()
+
+if __name__ == "__main__":
+    main()
